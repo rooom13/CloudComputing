@@ -1,16 +1,5 @@
 version: '3'
 services:
-  server:
-    build: ./server
-    image: rooom13/exercise_2:latest
-    container_name: exercise_2
-    depends_on:
-      - "mongodb"
-    environment:
-      - MONGODB_URI=mongodb://mongodb:27017/booksData
-    ports:
-      - "3000:3000"
-    restart: always
   mongodb:
     image: mongo:latest
     container_name: "mongodb"
@@ -20,4 +9,16 @@ services:
       - ./data/:/data/db
     ports:
         - "27017:27017"
+  server:
+    build: ./server
+    image: rooom13/cloudcomputinggroup79
+    container_name: cloudcomputinggroup79
+    depends_on:
+      - "mongodb"
+    environment:
+      - MONGODB_URI=mongodb://mongodb:27017/booksData
+    ports:
+      - "3000:3000"
+    restart: always
+  
 

@@ -3,6 +3,8 @@ const form = document.getElementById('bookForm');
 const results = document.getElementById('results');
 const baseURL = '/api/books/';
 
+console.log('mega test go AI blockchain 5G')
+
 const render = (books) => {
   results.innerHTML = '';
   form.children[0] = '';
