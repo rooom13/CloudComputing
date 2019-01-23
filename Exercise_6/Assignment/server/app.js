@@ -69,7 +69,10 @@ router.route('/exercise3/:name/:productId')
 
 
 router.get('/exercise6', function (req, res) {
-    res.json({ message: 'group 79 application deployed using kubernetes' });
+    // res.json({ message: 'Welcome to Cloud Computing Exercises API!' });
+
+    res.send("group 79 application deployed using kubernetes");
+
 });
 /**
  * REGISTER OUR ROUTES
